@@ -1,0 +1,50 @@
+﻿{
+  "changeName": "replace-tailwind-with-bootstrap",
+  "changeDir": "C:\\SYMLINKS\\GITROOT\\_my\\sdd\\openspec-1\\openspec\\changes\\replace-tailwind-with-bootstrap",
+  "schemaName": "spec-driven",
+  "contextFiles": {
+    "proposal": "C:\\SYMLINKS\\GITROOT\\_my\\sdd\\openspec-1\\openspec\\changes\\replace-tailwind-with-bootstrap\\proposal.md",
+    "specs": "C:\\SYMLINKS\\GITROOT\\_my\\sdd\\openspec-1\\openspec\\changes\\replace-tailwind-with-bootstrap\\specs\\**\\*.md",
+    "design": "C:\\SYMLINKS\\GITROOT\\_my\\sdd\\openspec-1\\openspec\\changes\\replace-tailwind-with-bootstrap\\design.md",
+    "tasks": "C:\\SYMLINKS\\GITROOT\\_my\\sdd\\openspec-1\\openspec\\changes\\replace-tailwind-with-bootstrap\\tasks.md"
+  },
+  "progress": {
+    "total": 6,
+    "complete": 0,
+    "remaining": 6
+  },
+  "tasks": [
+    {
+      "id": "1",
+      "description": "1.1 Replace Tailwind CDN with Bootstrap 5 CSS CDN in `index.html`",
+      "done": false
+    },
+    {
+      "id": "2",
+      "description": "1.2 Add `data-bs-theme=\"dark\"` to the `<html>` or `<body>` tag in `index.html`",
+      "done": false
+    },
+    {
+      "id": "3",
+      "description": "2.1 Update static HTML elements in `index.html` to use Bootstrap classes (e.g. `container`, `card`, `text-center`)",
+      "done": false
+    },
+    {
+      "id": "4",
+      "description": "2.2 Update input and button forms to use Bootstrap `form-control` and `btn btn-primary` classes in `index.html`",
+      "done": false
+    },
+    {
+      "id": "5",
+      "description": "3.1 Update the element generation in `src/app.js` to output Bootstrap layout classes (like `d-flex`, `justify-content-between`, `align-items-center`)",
+      "done": false
+    },
+    {
+      "id": "6",
+      "description": "3.2 Update the checkbox and delete button elements to use Bootstrap form and button classes",
+      "done": false
+    }
+  ],
+  "state": "ready",
+  "instruction": "Read context files, work through pending tasks, mark complete as you go.\nPause if you hit blockers or need clarification."
+}

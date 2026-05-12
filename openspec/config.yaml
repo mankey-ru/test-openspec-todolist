@@ -1,0 +1,39 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  # Project Overview
+  Simple single-page Todo List web app. Keep it minimal, fast and dependency-free.
+
+  # Permanent Tech Stack & Constraints
+  - Vanilla HTML5 + JavaScript (ES6+), Bootstrap@5
+  - Any CSS frameworks via CDN
+  - Persistence: browser localStorage only
+  - NO TypeScript, NO build tools
+  - Clean and readable JavaScript
+
+  # Folder Structure (strict rule)
+  - Root folder: only index.html, README.md and openspec/
+  - All source files (HTML/JS/CSS) must live in src/
+  - index.html is the single entry point
+
+  # UI Style
+  - Dark theme by default
+  - Fully responsive (mobile-first)
+  - Semantic HTML5
+
+# Strict rules for AI
+rules:
+  proposal:
+    - Always include rollback plan
+    - List exactly which files will be changed
+  specs:
+    - Use Given/When/Then for scenarios
+  design:
+    - Keep diagrams simple when needed
+  tasks:
+    - Tasks must be small and directly testable in browser
+
+enforcement: |
+  This config.yaml has the highest priority.
+  AI must re-read it before every /opsx:apply and strictly enforce src/ structure.

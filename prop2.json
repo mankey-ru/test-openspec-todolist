@@ -1,0 +1,20 @@
+﻿{
+  "changeName": "replace-tailwind-with-bootstrap",
+  "artifactId": "proposal",
+  "schemaName": "spec-driven",
+  "changeDir": "C:\\SYMLINKS\\GITROOT\\_my\\sdd\\openspec-1\\openspec\\changes\\replace-tailwind-with-bootstrap",
+  "outputPath": "proposal.md",
+  "description": "Initial proposal document outlining the change",
+  "instruction": "Create the proposal document that establishes WHY this change is needed.\n\nSections:\n- **Why**: 1-2 sentences on the problem or opportunity. What problem does this solve? Why now?\n- **What Changes**: Bullet list of changes. Be specific about new capabilities, modifications, or removals. Mark breaking changes with **BREAKING**.\n- **Capabilities**: Identify which specs will be created or modified:\n  - **New Capabilities**: List capabilities being introduced. Each becomes a new `specs/<name>/spec.md`. Use kebab-case names (e.g., `user-auth`, `data-export`).\n  - **Modified Capabilities**: List existing capabilities whose REQUIREMENTS are changing. Only include if spec-level behavior changes (not just implementation details). Each needs a delta spec file. Check `openspec/specs/` for existing spec names. Leave empty if no requirement changes.\n- **Impact**: Affected code, APIs, dependencies, or systems.\n\nIMPORTANT: The Capabilities section is critical. It creates the contract between\nproposal and specs phases. Research existing specs before filling this in.\nEach capability listed here will need a corresponding spec file.\n\nKeep it concise (1-2 pages). Focus on the \"why\" not the \"how\" -\nimplementation details belong in design.md.\n\nThis is the foundation - specs, design, and tasks all build on this.\n",
+  "context": "# Project Overview\nSimple single-page Todo List web app. Keep it minimal, fast and dependency-free.\n\n# Permanent Tech Stack & Constraints\n- Vanilla HTML5 + JavaScript (ES6+)\n- Tailwind CSS only via CDN\n- Persistence: browser localStorage only\n- NO frameworks, NO TypeScript, NO build tools, NO npm\n\n# Folder Structure (strict rule)\n- Root folder: only index.html, README.md and openspec/\n- All source files (HTML/JS/CSS) must live in src/\n- index.html is the single entry point\n\n# UI Style\n- Dark theme by default\n- Fully responsive (mobile-first)\n- Semantic HTML5\n- Clean and readable JavaScript",
+  "rules": [
+    "Always include rollback plan",
+    "List exactly which files will be changed"
+  ],
+  "template": "## Why\n\n<!-- Explain the motivation for this change. What problem does this solve? Why now? -->\n\n## What Changes\n\n<!-- Describe what will change. Be specific about new capabilities, modifications, or removals. -->\n\n## Capabilities\n\n### New Capabilities\n<!-- Capabilities being introduced. Replace <name> with kebab-case identifier (e.g., user-auth, data-export, api-rate-limiting). Each creates specs/<name>/spec.md -->\n- `<name>`: <brief description of what this capability covers>\n\n### Modified Capabilities\n<!-- Existing capabilities whose REQUIREMENTS are changing (not just implementation).\n     Only list here if spec-level behavior changes. Each needs a delta spec file.\n     Use existing spec names from openspec/specs/. Leave empty if no requirement changes. -->\n- `<existing-name>`: <what requirement is changing>\n\n## Impact\n\n<!-- Affected code, APIs, dependencies, systems -->\n",
+  "dependencies": [],
+  "unlocks": [
+    "design",
+    "specs"
+  ]
+}
