@@ -177,7 +177,7 @@ function renderLists () {
 		});
 
 		const actionsDiv = document.createElement('div');
-		actionsDiv.className = 'd-flex gap-1';
+		actionsDiv.className = 'd-flex gap-1 action-btn-container';
 
 		const editBtn = document.createElement('button');
 		editBtn.className = `btn btn-sm ${list.id === activeListId ? 'btn-outline-light border-0' : 'btn-outline-secondary border-0'}`;
@@ -271,7 +271,7 @@ function renderTasks () {
 
 		// Delete button
 		const deleteBtn = document.createElement('button');
-		deleteBtn.className = 'btn btn-outline-danger btn-sm border-0 d-flex align-items-center justify-content-center';
+		deleteBtn.className = 'btn btn-outline-danger btn-sm border-0 d-flex align-items-center justify-content-center action-btn-container';
 		deleteBtn.style.width = '32px';
 		deleteBtn.style.height = '32px';
 		deleteBtn.title = 'Delete Task';

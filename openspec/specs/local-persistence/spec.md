@@ -20,3 +20,10 @@ The system SHALL gracefully migrate old flat array data to the new schema format
 - **GIVEN** the application starts with legacy `tasks = [...]` in LocalStorage
 - **WHEN** initialization module executes
 - **THEN** the system converts the loaded data into `{ "Default": [...] }` and applies formatting
+
+### Requirement: Run from src folder
+The logic to load and save to LocalStorage SHALL be executed from `src/app.js`.
+
+#### Scenario: Correct script loading
+- **WHEN** the user opens the application
+- **THEN** the script is successfully loaded from the `src/` directory and accesses local storage properly
