@@ -1,0 +1,26 @@
+{
+  "name": "test-openspec-todolist",
+  "version": "1.0.0",
+  "description": "sdd/\r ├── README.md                  # High-level overview and how to use this SDD\r ├── CONVENTIONS.md             # This file serves as a living reference for humans and AI coding agents (like those in AntiGravity, Aider, Claude Code, etc.). It enforces consistency in how the SDD is structured, written, and maintained.\r ├── ARCHITECTURE.md            # High-level system design\r ├── REQUIREMENTS.md            # Functional & non-functional requirements\r ├── DATA_MODEL.md              # Data structures, schemas, ER diagrams\r ├── API_SPEC.md                # API endpoints (use OpenSpec format)\r ├── COMPONENTS/                # One file per major component\r │   ├── component-auth.md\r │   ├── component-payments.md\r │   └── ...\r ├── DIAGRAMS/                  # PlantUML, Mermaid, or exported images\r ├── GLOSSARY.md\r └── CHANGELOG.md               # Track major SDD updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mankey-ru/test-openspec-todolist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mankey-ru/test-openspec-todolist/issues"
+  },
+  "homepage": "https://github.com/mankey-ru/test-openspec-todolist#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3"
+  }
+}

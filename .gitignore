@@ -115,3 +115,11 @@ AGENTS.md
 build/
 
 # Все остальное (включая папку openspec/changes/ и JSON-файлы) - КОММИТИМ.
+
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+playwright/.auth/
+playwright/.credentials/
