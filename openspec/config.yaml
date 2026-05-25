@@ -1,39 +1,48 @@
 # openspec/config.yaml
-schema: spec-driven
+# OpenSpec Configuration - Reference Model
+# Industry-wide artifacts are the single source of truth for agnostic content.
+# OpenSpec only orchestrates, references, and adds tool-specific extensions.
 
-context: |
-  # Project Overview
-  Simple single-page Todo List web app. Keep it minimal, fast and dependency-free.
+version: "1.0"
+mode: reference
 
-  # Permanent Tech Stack & Constraints
-  - Vanilla HTML5 + JavaScript (ES6+), Bootstrap@5
-  - Any CSS frameworks via CDN
-  - Persistence: browser localStorage only
-  - NO TypeScript, NO build tools
-  - Clean and readable JavaScript
+# Artifact Ownership Matrix - Industry files are masters
+artifacts:
+  industry_wide:
+    AGENTS.md:
+      path: "/AGENTS.md"
+      description: "AI agent behavior and interaction rules (industry standard)"
+      open_spec_extension: "openspec/specs/agents-extension.spec.md"
+    CONVENTIONS.md:
+      path: "/CONVENTIONS.md"
+      description: "Project conventions and contribution guidelines"
+      open_spec_extension: "openspec/specs/conventions-extension.spec.md"
+    CODE_STYLE.md:
+      path: "/CODE_STYLE.md"
+      description: "Code style and formatting rules"
+      open_spec_extension: "openspec/specs/code-style-extension.spec.md"
+    GLOSSARY.md:
+      path: "/GLOSSARY.md"
+      description: "Project glossary and terminology"
+      open_spec_extension: null
+    SKILLS.md:
+      path: "/SKILLS.md"
+      description: "Agent and team skills matrix"
+      open_spec_extension: "openspec/specs/skills-extension.spec.md"
 
-  # Folder Structure (strict rule)
-  - Root folder: only index.html, README.md and openspec/
-  - All source files (HTML/JS/CSS) must live in src/
-  - index.html is the single entry point
+  openspec_specific:
+    - "openspec/specs/continue-rules.spec.md"
+    - "openspec/specs/openspec-workflow.spec.md"
 
-  # UI Style
-  - Dark theme by default
-  - Fully responsive (mobile-first)
-  - Semantic HTML5
+# Rules for AI tools (Continue.dev, etc.)
+continue:
+  preferred_sources:
+    - root_industry_files
+    - openspec_extensions
+  rules_directory: ".continue/rules"
 
-# Strict rules for AI
-rules:
-  proposal:
-    - Always include rollback plan
-    - List exactly which files will be changed
-  specs:
-    - Use Given/When/Then for scenarios
-  design:
-    - Keep diagrams simple when needed
-  tasks:
-    - Tasks must be small and directly testable in browser
-
-enforcement: |
-  This config.yaml has the highest priority.
-  AI must re-read it before every /opsx:apply and strictly enforce src/ structure.
+# General constraints
+enforce_no_duplication: true
+require_english: true
+industry_compatibility: "maximum"
+project: "test-openspec-todolist (ToDoList application)"
