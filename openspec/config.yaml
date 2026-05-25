@@ -21,6 +21,10 @@ artifacts:
       path: "/CODE_STYLE.md"
       description: "Code style and formatting rules"
       open_spec_extension: "openspec/specs/code-style-extension.spec.md"
+    .editorconfig:
+      path: "/.editorconfig"
+      description: "EditorConfig file for consistent coding style across different editors and IDEs"
+      open_spec_extension: null
     GLOSSARY.md:
       path: "/GLOSSARY.md"
       description: "Project glossary and terminology"
