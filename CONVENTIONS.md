@@ -1,3 +1,6 @@
+<!-- THIS COMMENT IS NOT FOR AI
+Живая справочная документация для агентов (форматирование, именование, стиль кода, Git workflow).
+-->
 # CONVENTIONS.md
 
 ## Project Conventions & Contribution Guidelines
@@ -21,4 +24,4 @@ This is a test ToDoList project developed with OpenSpec (Spec-Driven Development
 - Industry-wide / permanent information lives at the repository root.
 - Feature-specific specifications live in `openspec/specs/`.
 
-See also: `CODE_STYLE.md`, `TECH_STACK.md`, `GLOSSARY.md`, `SKILLS.md`.
+See also: `CODE_STYLE.md`, `GLOSSARY.md`, `SKILLS.md`.

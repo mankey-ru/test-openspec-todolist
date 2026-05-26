@@ -1,3 +1,6 @@
+<!-- THIS COMMENT IS NOT FOR AI
+Должен содержать роли агентов, инструкции, ограничения, список разрешённых GitHub-инструментов, правила взаимодействия с OpenSpec.
+-->
 # AGENTS.md
 
 ## AI Agent Guidelines
@@ -20,3 +23,4 @@ It is optimized for AI coding agents (Continue.dev, Cursor, Claude Code, Aider, 
 - Use clear references and links instead of copying content.
 
 For tool-specific instructions, see `.continue/` (if present) and `openspec/config.yaml`.
+
