@@ -1,6 +1,3 @@
-<!-- THIS COMMENT IS NOT FOR AI
-Живая справочная документация для агентов (форматирование, именование, стиль кода, Git workflow).
--->
 # CONVENTIONS.md
 
 ## Project Conventions & Contribution Guidelines
@@ -11,7 +8,17 @@ This is a test ToDoList project developed with OpenSpec (Spec-Driven Development
 - All documentation is in English.
 - Use Markdown for all artifacts.
 - Use kebab-case for directories and files when possible.
-- Follow `.editorconfig` and `CODE_STYLE.md`.
+- Follow `.editorconfig` (the canonical source for formatting and editor settings).
+- All code must be readable and maintainable.
+- Prefer explicit over implicit.
+- Follow language-specific community standards (TypeScript, CSS, etc.).
+
+### Code Style
+- Use consistent formatting via the root `.editorconfig` file.
+- Industry-agnostic conventions live in root files.
+- Tool-specific configurations go into `.continue/`, `openspec/`, or standard dotfiles.
+- Use clear, concise language in documentation.
+- Include examples when helpful.
 
 ### Contribution Workflow
 1. Read the relevant root industry-wide files first.
@@ -24,4 +31,4 @@ This is a test ToDoList project developed with OpenSpec (Spec-Driven Development
 - Industry-wide / permanent information lives at the repository root.
 - Feature-specific specifications live in `openspec/specs/`.
 
-See also: `CODE_STYLE.md`, `GLOSSARY.md`, `SKILLS.md`.
+See also: `GLOSSARY.md`, `SKILLS.md`, `TECH_STACK.md`, `.editorconfig`.
