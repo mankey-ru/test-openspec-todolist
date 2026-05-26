@@ -10,7 +10,7 @@ This repository is a test OpenSpec-driven ToDoList application.
 It is optimized for AI coding agents (Continue.dev, Cursor, Claude Code, Aider, etc.).
 
 ### Core Principles
-- Follow industry-standard file locations first (AGENTS.md, CONVENTIONS.md, CODE_STYLE.md, TECH_STACK.md, .editorconfig, etc.).
+- Follow industry-standard file locations first (AGENTS.md, CONVENTIONS.md,editorconfig, etc.).
 - Treat `openspec/` as the governance and orchestration layer only.
 - **Industry-wide artifacts at the repository root are the single source of truth** for agnostic content.
 - All code and artifacts must be in English.

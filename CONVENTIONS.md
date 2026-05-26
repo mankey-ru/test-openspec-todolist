@@ -31,4 +31,4 @@ This is a test ToDoList project developed with OpenSpec (Spec-Driven Development
 - Industry-wide / permanent information lives at the repository root.
 - Feature-specific specifications live in `openspec/specs/`.
 
-See also: `GLOSSARY.md`, `SKILLS.md`, `TECH_STACK.md`, `.editorconfig`.
+See also: `GLOSSARY.md`, `.editorconfig`.
