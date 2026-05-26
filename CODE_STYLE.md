@@ -17,8 +17,5 @@ This project is a ToDoList application following modern industry standards with 
 ### Documentation Style
 - Use clear, concise language.
 - Include examples when helpful.
-- Keep artifacts modular and non-duplicated.
 
-For detailed rules per language/technology, extend via `openspec/specs/`.
-
-See also: `.editorconfig` at repository root.
+See also: `.editorconfig` at repository root and `CONVENTIONS.md`.
