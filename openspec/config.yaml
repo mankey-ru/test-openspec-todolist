@@ -1,7 +1,8 @@
 # openspec/config.yaml
-# OpenSpec Configuration - Reference Model
-# Industry-wide artifacts are the single source of truth for agnostic content.
-# OpenSpec only orchestrates, references, and adds tool-specific extensions.
+# OpenSpec Configuration - Simplified Reference Model
+# Industry-wide artifacts (root files) are the single source of truth.
+# OpenSpec config now encapsulates all extensions and specific rules inline.
+# This keeps the setup simple as requested - no separate extension .spec.md files.
 
 version: "1.0"
 mode: reference
@@ -12,37 +13,54 @@ artifacts:
     AGENTS.md:
       path: "/AGENTS.md"
       description: "AI agent behavior and interaction rules (industry standard)"
-      open_spec_extension: "openspec/specs/agents-extension.spec.md"
+      open_spec_extension:
+        additional_rules: |
+          - Always respect the ownership model defined in this config.yaml
+          - Prefer root industry files as the single source of truth
+          - Be precise, minimal, and follow user instructions (including 'ignore SDD way')
+
     CONVENTIONS.md:
       path: "/CONVENTIONS.md"
       description: "Project conventions and contribution guidelines"
-      open_spec_extension: "openspec/specs/conventions-extension.spec.md"
+      open_spec_extension:
+        additional_rules: |
+          - Follow OpenSpec process strictly only when /opsx: commands are used
+          - For normal questions, answer within repository and OpenSpec context
+          - All contributions and artifacts must be in English
+
     CODE_STYLE.md:
       path: "/CODE_STYLE.md"
       description: "Code style and formatting rules"
-      open_spec_extension: "openspec/specs/code-style-extension.spec.md"
+      open_spec_extension:
+        additional_rules: |
+          - Strictly follow /.editorconfig (pushed by user) as the primary formatting authority
+          - All AI agents (Continue.dev etc.) must respect .editorconfig
+          - Keep code readable and consistent with modern industry standards
+
     .editorconfig:
       path: "/.editorconfig"
-      description: "EditorConfig file for consistent coding style across different editors and IDEs"
+      description: "EditorConfig file for consistent coding style across editors and IDEs"
       open_spec_extension: null
+
     GLOSSARY.md:
       path: "/GLOSSARY.md"
       description: "Project glossary and terminology"
       open_spec_extension: null
+
     SKILLS.md:
       path: "/SKILLS.md"
       description: "Agent and team skills matrix"
-      open_spec_extension: "openspec/specs/skills-extension.spec.md"
-
-  openspec_specific:
-    - "openspec/specs/continue-rules.spec.md"
-    - "openspec/specs/openspec-workflow.spec.md"
+      open_spec_extension:
+        additional_rules: |
+          - Primary tools: VSCode + Continue.dev + OpenSpec agent
+          - Support reference-based ownership model
+          - Maintain zero unnecessary duplication
 
 # Rules for AI tools (Continue.dev, etc.)
 continue:
   preferred_sources:
     - root_industry_files
-    - openspec_extensions
+    - inline_open_spec_extensions
   rules_directory: ".continue/rules"
 
 # General constraints
@@ -50,3 +68,10 @@ enforce_no_duplication: true
 require_english: true
 industry_compatibility: "maximum"
 project: "test-openspec-todolist (ToDoList application)"
+
+# OpenSpec-specific extensions (encapsulated here for simplicity)
+openspec_extensions:
+  workflow: "Follow proper OpenSpec workflow (proposal → specs → design → tasks → implementation) unless user explicitly says 'ignore SDD way'"
+  duplication: "Never duplicate content between root industry files and this config"
+  language: "All code, artifacts, and responses must be in English"
+  philosophy: "Keep it simple, balanced, and industry-compatible as per user preference"
